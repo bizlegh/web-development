@@ -1,7 +1,3 @@
-/* =============================================
-   HeroForge - Shared & Creator Stylesheet
-   ============================================= */
-
 /* --- General Reset & Base --- */
 * {
     margin: 0;
@@ -42,7 +38,7 @@ img {
     max-width: 100%;
 }
 
-/* --- Header --- */
+/* --- Header & Navigation --- */
 header {
     background-color: #2a2a2a;
     padding: 15px 30px;
@@ -58,7 +54,6 @@ header h1 {
     margin-bottom: 0;
 }
 
-/* --- Nav --- */
 nav ul {
     list-style: none;
     padding: 0;
@@ -94,7 +89,7 @@ nav ul li a.active {
     color: #f2b949;
 }
 
-/* --- Page Layout --- */
+/* --- Page Layout & Sidebar --- */
 .page-wrapper {
     min-height: 100vh;
     display: flex;
@@ -116,7 +111,6 @@ main {
     flex: 1;
 }
 
-/* --- Aside --- */
 aside {
     width: 260px;
     min-width: 220px;
@@ -155,7 +149,7 @@ aside ul li:last-child {
 }
 
 /* --- Cards & Components --- */
-.card, .class-card {
+.card, .class-card, .sitemap-column, .team-card {
     background-color: #2a2a2a;
     border: 1px solid #444;
     border-radius: 8px;
@@ -166,11 +160,10 @@ aside ul li:last-child {
     margin-bottom: 20px;
 }
 
-.card h2, .card h3, .section-title, .class-card h3 {
+.card h2, .card h3, .section-title, .class-card h3, .sitemap-column h3, .about-section h3 {
     color: #f2b949;
 }
 
-/* --- Section titles --- */
 .section-title {
     font-size: 1.3rem;
     margin-bottom: 15px;
@@ -178,25 +171,15 @@ aside ul li:last-child {
     padding-bottom: 8px;
 }
 
-/* --- Hero banner (index only) --- */
-.hero-banner {
-    background-color: #2a2a2a;
+/* --- Hero Banners --- */
+.hero-banner, .about-hero {
     text-align: center;
     padding: 60px 20px;
+}
+
+.hero-banner {
+    background-color: #2a2a2a;
     border-bottom: 1px solid #444;
-}
-
-.hero-banner h2 {
-    font-size: 2rem;
-    color: #f2b949;
-    margin-bottom: 15px;
-}
-
-.hero-banner p {
-    font-size: 1.1rem;
-    color: #ccc;
-    max-width: 550px;
-    margin: 0 auto 25px;
 }
 
 /* --- Buttons --- */
@@ -233,15 +216,20 @@ aside ul li:last-child {
     background-color: rgba(242, 185, 73, 0.1);
 }
 
-/* --- Class grid (index) --- */
-.class-grid {
+/* --- Grids (Index, Sitemap, About) --- */
+.class-grid, .sitemap-grid, .team-grid {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
     margin-top: 15px;
 }
 
-.class-card {
+.class-card, .sitemap-column, .team-card {
+    min-width: 200px;
     flex: 1;
+}
+
+.class-card {
     text-align: center;
 }
 
@@ -339,7 +327,7 @@ textarea {
     min-height: 120px;
 }
 
-.checkbox-group {
+.checkbox-group, .radio-group {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -363,13 +351,9 @@ textarea {
     margin-bottom: 5px;
 }
 
-/* =============================================
-   --- עיצוב ייחודי לעמוד יוצר הגיבורים ---
-   ============================================= */
-
 .creator-wrapper {
     display: flex;
-    flex-direction: row; /* מוודא שהם יעמדו אחד ליד השני משמין לשמאל */
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     max-width: 1400px;
@@ -379,13 +363,13 @@ textarea {
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.5);
     gap: 30px;
-    width: 95%; 
+    width: 95%;
     box-sizing: border-box;
 }
 
 .form-container {
-    width: 450px; 
-    flex-shrink: 0; 
+    width: 450px;
+    flex-shrink: 0;
     background-color: #333;
     padding: 30px;
     border-radius: 8px;
@@ -393,24 +377,24 @@ textarea {
 }
 
 .preview-container {
-    flex: 1 ; 
+    flex: 1 ;
     background-color: #333;
     padding: 30px;
     border-radius: 8px;
     box-sizing: border-box;
 }
 
-.form-group {
+.form-container .form-group {
     margin-bottom: 20px;
 }
 
-label {
+.form-container label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-input[type="text"] {
+.form-container input[type="text"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #555;
@@ -420,15 +404,14 @@ input[type="text"] {
     box-sizing: border-box;
 }
 
-.radio-group, .checkbox-group {
-    display: flex;
+.form-container .radio-group,
+.form-container .checkbox-group {
     gap: 15px;
     background-color: #222;
     padding: 10px;
     border-radius: 4px;
 }
 
-/* כפתור אישור במצב התחלתי (חוסר זמינות) */
 #submitBtn {
     width: 100%;
     padding: 12px;
@@ -442,7 +425,6 @@ input[type="text"] {
     transition: all 0.3s ease;
 }
 
-/* אזור התמונות והאינטראקציה */
 .character-images, .gear-images {
     display: flex;
     justify-content: center;
@@ -451,7 +433,6 @@ input[type="text"] {
     width: 100%;
 }
 
-/* התאמת גדלי התמונות שלא יקפיצו את הדיב החוצה */
 .gear-img {
     width: 120px;
     height: 120px;
@@ -466,4 +447,117 @@ input[type="text"] {
     object-fit: contain;
     opacity: 0;
     transition: opacity 0.3s ease;
+}
+
+.sitemap-column h3 {
+    font-size: 1rem;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #444;
+}
+
+.sitemap-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sitemap-column ul li {
+    padding: 4px 0;
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.sitemap-column ul li::before {
+    content: "• ";
+    color: #f2b949;
+}
+
+.sitemap-column ul li a {
+    color: #ccc;
+}
+
+.sitemap-column ul li a:hover {
+    color: #f2b949;
+}
+
+.sitemap-column ul li strong {
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.sitemap-column ul li.sub-item {
+    padding-right: 14px;
+    font-size: 0.85rem;
+}
+
+.sitemap-column ul li.sub-item::before {
+    content: "◦ ";
+    color: #aaa;
+}
+
+.note {
+    font-size: 0.82rem;
+    color: #888;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+/* --- About Page Extras --- */
+.about-section {
+    margin-bottom: 28px;
+}
+
+.about-section h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 6px;
+}
+
+.about-section p {
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.about-section .highlight {
+    color: #f2b949;
+    font-weight: bold;
+}
+
+.about-section a {
+    color: #f2b949;
+}
+
+.side-note {
+    position: relative;
+}
+
+.rotated-label {
+    position: absolute;
+    left: -60px;
+    top: 50px;
+    transform: rotate(-15deg);
+    font-size: 0.78rem;
+    color: #666;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.team-card h4 {
+    color: #f2b949;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.team-card p {
+    font-size: 0.88rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0;
 }
