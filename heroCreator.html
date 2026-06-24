@@ -1,136 +1,98 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>מזירת הגיבורים - עצב את האגדה שלך</title>
-    <meta name="description" content="מזירת הגיבורים היא אתר יצירת גיבורים לעולם פנטזיה אפלה. בחר את המקצוע שלך וצא לדרך." />
-    <meta name="keywords" content="RPG, גיבור, פנטזיה, לוחם, קוסם, צייד" />
+    <title>מזירת הגיבורים - יצירת גיבור</title>
+    <meta name="description" content="יצירת גיבור מעל מקצוע וציוד מלווה בבחירה אישית " />
+    <meta name="keywords" content="יצירת גיבור, מזירת הגיבורים, מקצועות, עיצוב אישי" />
     <meta name="author" content="מזירת הגיבורים" />
     <link rel="icon" href="#" />
     <link rel="stylesheet" href="styles/myStyle.css" />
 </head>
 <body>
+    <div class="page-wrapper">
+        <!-- כותרת -->
+        <header>
+            <h1>מזירת הגיבורים</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ראשי</a></li>
+                    <li><a href="lore.html">העולם</a></li>
+                    <li><a href="heroCreator.html" class="active">יצירת גיבור</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="contactUs.html" >צור קשר</a></li>
+                    <li><a href="siteMap.html">מפת האתר</a></li>
+                </ul>
+            </nav>
+        </header>
 
-<div class="page-wrapper">
+        <!-- פירורי לחם -->
+        <div class="breadcrumbs">
+            <a href="index.html">ראשי</a> &rsaquo; יצירת גיבור
+        </div>
 
-    <!-- כותרת -->
-    <header>
-        <h1>מזירת הגיבורים</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">ראשי</a></li>
-                <li><a href="lore.html">העולם</a></li>
-                <li><a href="heroCreator.html">יצירת גיבור</a></li>
-                <li><a href="about.html">אודות</a></li>
-                <li><a href="contactUs.html">צור קשר</a></li>
-                <li><a href="siteMap.html">מפת האתר</a></li>
-            </ul>
-        </nav>
-    </header>
+        <main class="creator-wrapper">
 
-    <!-- באנר ראשי -->
-    <section class="hero-banner">
-        <h2>עצב את האגדה שלך</h2>
-        <p>
-            כל אגדה גדולה מתחילה בבחירה. בחר את המקצוע שלך,
-            תבע את נשקך, וצא לעולם אית'רמור.
-        </p>
-        <a href="heroCreator.html" class="btn btn-primary">צור את הגיבור שלך</a>
-        &nbsp;
-        <a href="lore.html" class="btn btn-secondary">גלה את העולם</a>
-    </section>
+            <section class="form-container">
+                <h2>יצירת גיבור חדש</h2>
+                <form id="heroForm" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="heroName">שם הגיבור:</label>
+                        <input type="text" id="heroName" placeholder="הכנס את שם השחקן..." required>
+                    </div>
 
-    <!-- אזור תוכן -->
-    <div class="content-area">
+                    <div class="form-group">
+                        <label>בחר מקצוע :</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="heroClass" value="warrior">לוחם</label>
+                            <label><input type="radio" name="heroClass" value="mage">קוסם</label>
+                            <label><input type="radio" name="heroClass" value="hunter">צייד</label>
+                        </div>
+                    </div>
 
-        <main>
-            <!-- אודות העולם -->
-            <div class="card">
-                <h2 class="section-title">ברוכים הבאים לאית'רמור</h2>
-                <p>
-                    לפני שלושה מאות שנה, האלים השתתקו. מאז, ממלכת אית'רמור
-                    נבלעת לאט לאט בחשכה הידועה בשם ציפורני-הריק. ערים קרסו,
-                    דרכים הפכו למסוכנות, וברית עתיקות נשברו.
-                </p>
-                <p>
-                    אך בין חורבות העולם הישן, גיבורים קמים. לוחמים, קוסמים
-                    וציידים שעומדים בין מה שנותר לבין מה שמאיים לקחת הכל.
-                </p>
-                <p>
-                    אית'רמור לא צריכה שלמות. היא צריכה <strong>אותך</strong>.
-                </p>
-                <a href="lore.html" class="btn btn-secondary">קרא את הלור המלא ←</a>
-            </div>
+                    <div class="form-group">
+                        <label>בחר ציוד נלווה:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" class="gear-checkbox" value="shield">מגן</label>
+                            <label><input type="checkbox" class="gear-checkbox" value="wand">שרביט</label>
+                            <label><input type="checkbox" class="gear-checkbox" value="sword">חרב</label>
+                        </div>
+                    </div>
 
-            <!-- שלושת המקצועות -->
-            <h2 class="section-title">בחר את דרכך</h2>
-            <div class="class-grid">
+                    <button type="submit" id="submitBtn" disabled>צור דמות! ️</button>
+                </form>
+            </section>
 
-                <div class="class-card">
-                    <span class="class-icon">🛡️</span>
-                    <h3>לוחם</h3>
-                    <p>אדוני הפלדה והסיבולת. הלוחמים מחזיקים את הקו כדי שאחרים יוכלו לשרוד.</p>
-                    <a href="heroCreator.html" class="btn btn-primary">בחר לוחם</a>
+            <section class="preview-container">
+                <h3>תצוגה מקדימה</h3>
+                <div class="character-images">
+                    <img src="assets/warrior.png" id="img-warrior" class="class-img" alt="לוחם">
+                    <img src="assets/mage.png" id="img-mage" class="class-img" alt="קוסם">
+                    <img src="assets/hunter.png" id="img-hunter" class="class-img" alt="צייד">
                 </div>
-
-                <div class="class-card">
-                    <span class="class-icon">🔮</span>
-                    <h3>קוסם</h3>
-                    <p>חוקרי הנסתר. שבריריים בגוף, אך הרסניים בעוצמתם.</p>
-                    <a href="heroCreator.html" class="btn btn-primary">בחר קוסם</a>
+                <div class="gear-images">
+                    <img src="assets/shield.png" id="img-shield" class="gear-img" alt="מגן">
+                    <img src="assets/wand.png" id="img-wand" class="gear-img" alt="שרביט">
+                    <img src="assets/sword.png" id="img-sword" class="gear-img" alt="חרב">
                 </div>
-
-                <div class="class-card">
-                    <span class="class-icon">🏹</span>
-                    <h3>צייד</h3>
-                    <p>רוחות הפרא. רואים הכל ונעלמים לפני שהאויב מבין מה פגע בו.</p>
-                    <a href="heroCreator.html" class="btn btn-primary">בחר צייד</a>
-                </div>
-
-            </div>
-        </main>
-
-        <!-- סרגל צד -->
-        <aside>
-            <h3>⚔ גיבור היום</h3>
-            <p><strong>אלרה אשביין</strong><br />מקצוע: קוסמת<br />נשק: שרביט הריק</p>
-
-            <br />
-
-            <h3>פתגם עתיק</h3>
-            <p><em>"להב ללא מניף הוא רק ברזל."</em></p>
-
-            <br />
-
-            <h3>ניווט מהיר</h3>
-            <ul>
-                <li><a href="heroCreator.html">צור את הגיבור שלך</a></li>
-                <li><a href="lore.html">למד על העולם</a></li>
-                <li><a href="about.html">אודות האתר</a></li>
-                <li><a href="contactUs.html">צור קשר</a></li>
-            </ul>
-        </aside>
-
-    </div><!-- end .content-area -->
-
-    <!-- כותרת תחתונה -->
-    <footer>
-        <p>מזירת הגיבורים &nbsp;|&nbsp; חוויית יצירת גיבורים בעולם פנטזיה אפלה</p>
-        <p>נוצר עבור קורס פיתוח אתרי אינטרנט, מכון טכנולוגי חולון · 2026</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">ראשי</a></li>
-                <li><a href="lore.html">העולם</a></li>
-                <li><a href="heroCreator.html">יצירת גיבור</a></li>
-                <li><a href="about.html">אודות</a></li>
-                <li><a href="contactUs.html">צור קשר</a></li>
-                <li><a href="siteMap.html">מפת האתר</a></li>
-            </ul>
-        </nav>
-    </footer>
-
-</div><!-- end .page-wrapper -->
-
+            </section>
+        </main> 
+        
+        <footer>
+            <p>מזירת הגיבורים &nbsp;|&nbsp; חוויית יצירת גיבורים בעולם פנטזיה אפלה</p>
+            <p>נוצר עבור קורס פיתוח אתרי אינטרנט, מכון טכנולוגי חולון · 2026</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ראשי</a></li>
+                    <li><a href="lore.html">העולם</a></li>
+                    <li><a href="heroCreator.html">יצירת גיבור</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="contactUs.html">צור קשר</a></li>
+                    <li><a href="siteMap.html">מפת האתר</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+    <script src="jScripts/tofes.js"></script>
 </body>
 </html>
