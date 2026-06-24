@@ -1,4 +1,4 @@
-﻿// יצירת משתנים לפי האלמנטים שבטופס
+// יצירת משתנים לפי האלמנטים שבטופס
 const heroNameInput = document.getElementById("heroName");
 const classRadios = document.querySelectorAll('input[name="heroClass"]');
 const gearCheckboxes = document.querySelectorAll(".gear-checkbox");
