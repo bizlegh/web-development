@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מזירת הגיבורים - צור קשר</title>
+    <meta name="description" content="צרו קשר עם צוות מזירת הגיבורים — שאלות, הצעות ודיווח על תקלות." />
+    <meta name="keywords" content="צור קשר, מזירת הגיבורים, פנייה, שאלות" />
+    <meta name="author" content="מזירת הגיבורים" />
+    <link rel="icon" href="#" />
+    <link rel="stylesheet" href="styles/myStyle.css" />
+</head>
+<body>
+
+<div class="page-wrapper">
+
+    <!-- כותרת -->
+    <header>
+        <h1>⚒ מזירת הגיבורים</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">ראשי</a></li>
+                <li><a href="lore.html">העולם</a></li>
+                <li><a href="heroCreator.html">יצירת גיבור</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="contactUs.html" class="active">צור קשר</a></li>
+                <li><a href="siteMap.html">מפת האתר</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- פירורי לחם -->
+    <div class="breadcrumbs">
+        <a href="index.html">ראשי</a> &rsaquo; צור קשר
+    </div>
+
+    <!-- אזור תוכן -->
+    <div class="content-area">
+
+        <main>
+            <div class="card">
+                <h2 class="section-title">צור קשר</h2>
+                <p class="required-note">שדות המסומנים ב-<span style="color:#f2b949;">*</span> הם שדות חובה.</p>
+
+                <form>
+
+                    <!-- שם -->
+                    <div class="form-group">
+                        <label for="name">שם מלא <span class="required">*</span></label>
+                        <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="הכנס את שמך המלא"
+                                required
+                        />
+                    </div>
+
+                    <!-- אימייל -->
+                    <div class="form-group">
+                        <label for="email">כתובת אימייל <span class="required">*</span></label>
+                        <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="example@email.com"
+                                required
+                        />
+                    </div>
+
+                    <!-- נושא הפנייה -->
+                    <div class="form-group">
+                        <label for="subject">נושא הפנייה <span class="required">*</span></label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>-- בחר נושא --</option>
+                            <option value="bug">דיווח על תקלה</option>
+                            <option value="question">שאלה כללית</option>
+                            <option value="suggestion">הצעה לשיפור</option>
+                            <option value="other">אחר</option>
+                        </select>
+                    </div>
+
+                    <!-- דירוג -->
+                    <div class="form-group">
+                        <label for="rating">דירוג האתר (1-10)</label>
+                        <input
+                                type="number"
+                                id="rating"
+                                name="rating"
+                                min="1"
+                                max="10"
+                                placeholder="הכנס מספר בין 1 ל-10"
+                        />
+                    </div>
+
+                    <!-- הודעה -->
+                    <div class="form-group">
+                        <label for="message">הודעה <span class="required">*</span></label>
+                        <textarea
+                                id="message"
+                                name="message"
+                                placeholder="כתוב את הודעתך כאן..."
+                                required
+                        ></textarea>
+                    </div>
+
+                    <!-- הסכמה לתנאים -->
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="agree" name="agree" required />
+                            <label for="agree">קראתי ואני מסכים/ה לתנאי השימוש באתר <span class="required">*</span></label>
+                        </div>
+                    </div>
+
+                    <!-- כפתור שליחה -->
+                    <div>
+                        <button type="submit" class="btn btn-primary">שלח פנייה</button>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+
+        <!-- סרגל צד -->
+        <aside>
+            <h3>📬 דרכי יצירת קשר</h3>
+            <p>ניתן לפנות אלינו גם ישירות:</p>
+            <ul>
+                <li>אליה</li>
+                <li>אימייל: eliyaav@hit.ac.il</li>
+                <li>טלפון: 054לעעעעע</li>
+                <br />
+                <li>ליאל</li>
+                <li>אימייל: lieloh@hit.ac.il</li>
+                <li>טלפון: 053לעעעעע</li>
+            </ul>
+        </aside>
+
+    </div><!-- end .content-area -->
+
+    <!-- כותרת תחתונה -->
+    <footer>
+        <p>מזירת הגיבורים &nbsp;|&nbsp; חוויית יצירת גיבורים בעולם פנטזיה אפלה</p>
+        <p>נוצר עבור קורס פיתוח אתרי אינטרנט, מכון טכנולוגי חולון · 2026</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">ראשי</a></li>
+                <li><a href="lore.html">העולם</a></li>
+                <li><a href="heroCreator.html">יצירת גיבור</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="contactUs.html">צור קשר</a></li>
+                <li><a href="siteMap.html">מפת האתר</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</div><!-- end .page-wrapper -->
+
+</body>
+</html>

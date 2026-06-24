@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מזירת הגיבורים - יצירת גיבור</title>
+    <meta name="description" content="יצירת גיבור מעל מקצוע וציוד מלווה בבחירה אישית " />
+    <meta name="keywords" content="יצירת גיבור, מזירת הגיבורים, מקצועות, עיצוב אישי" />
+    <meta name="author" content="מזירת הגיבורים" />
+    <link rel="icon" href="#" />
+    <link rel="stylesheet" href="styles/myStyle.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- כותרת -->
+        <header>
+            <h1>מזירת הגיבורים</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ראשי</a></li>
+                    <li><a href="lore.html">העולם</a></li>
+                    <li><a href="heroCreator.html" class="active">יצירת גיבור</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="contactUs.html" >צור קשר</a></li>
+                    <li><a href="siteMap.html">מפת האתר</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- פירורי לחם -->
+        <div class="breadcrumbs">
+            <a href="index.html">ראשי</a> &rsaquo; יצירת גיבור
+        </div>
+
+        <main class="creator-wrapper">
+
+            <section class="form-container">
+                <h2>יצירת גיבור חדש</h2>
+                <form id="heroForm" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="heroName">שם הגיבור:</label>
+                        <input type="text" id="heroName" placeholder="הכנס את שם השחקן..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>בחר מקצוע :</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="heroClass" value="warrior">לוחם</label>
+                            <label><input type="radio" name="heroClass" value="mage">קוסם</label>
+                            <label><input type="radio" name="heroClass" value="hunter">צייד</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>בחר ציוד נלווה:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" class="gear-checkbox" value="shield">מגן</label>
+                            <label><input type="checkbox" class="gear-checkbox" value="wand">שרביט</label>
+                            <label><input type="checkbox" class="gear-checkbox" value="sword">חרב</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submitBtn" disabled>צור דמות! ️</button>
+                </form>
+            </section>
+
+            <section class="preview-container">
+                <h3>תצוגה מקדימה</h3>
+                <div class="character-images">
+                    <img src="assets/warrior.png" id="img-warrior" class="class-img" alt="לוחם">
+                    <img src="assets/mage.png" id="img-mage" class="class-img" alt="קוסם">
+                    <img src="assets/hunter.png" id="img-hunter" class="class-img" alt="צייד">
+                </div>
+                <div class="gear-images">
+                    <img src="assets/shield.png" id="img-shield" class="gear-img" alt="מגן">
+                    <img src="assets/wand.png" id="img-wand" class="gear-img" alt="שרביט">
+                    <img src="assets/sword.png" id="img-sword" class="gear-img" alt="חרב">
+                </div>
+            </section>
+        </main> 
+        
+        <footer>
+            <p>מזירת הגיבורים &nbsp;|&nbsp; חוויית יצירת גיבורים בעולם פנטזיה אפלה</p>
+            <p>נוצר עבור קורס פיתוח אתרי אינטרנט, מכון טכנולוגי חולון · 2026</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ראשי</a></li>
+                    <li><a href="lore.html">העולם</a></li>
+                    <li><a href="heroCreator.html">יצירת גיבור</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="contactUs.html">צור קשר</a></li>
+                    <li><a href="siteMap.html">מפת האתר</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+    <script src="jScripts/tofes.js"></script>
+</body>
+</html>
